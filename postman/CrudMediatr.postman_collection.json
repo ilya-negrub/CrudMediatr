@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "827a2c7c-1cb1-489e-a16f-5770921d0905",
+		"name": "CrudMediatr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16644419",
+		"_collection_link": "https://gold-star-915348.postman.co/workspace/tmp~26bfb9fc-54ba-412e-8807-70f0bbdf66b9/collection/16644419-827a2c7c-1cb1-489e-a16f-5770921d0905?action=share&source=collection_link&creator=16644419"
+	},
+	"item": [
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"name\": \"string\",\r\n  \"sparePartsIds\": [\r\n    0\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Car/Create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Car",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": null,\r\n    \"pageIndex\": 0,\r\n    \"pageSize\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Car/Read",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Car",
+								"Read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"name\": \"string-1\",\r\n  \"sparePartsIds\": [\r\n    0, 1, 2\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Car/Update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Car",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Car/Delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Car",
+								"Delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://localhost:7253",
+			"type": "string"
+		}
+	]
+}
